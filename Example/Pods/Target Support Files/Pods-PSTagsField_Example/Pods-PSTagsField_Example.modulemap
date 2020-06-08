@@ -1,0 +1,6 @@
+framework module Pods_PSTagsField_Example {
+  umbrella header "Pods-PSTagsField_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

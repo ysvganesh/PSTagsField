@@ -1,0 +1,22 @@
+{
+  "name": "PSTagsField",
+  "version": "0.1.0",
+  "summary": "A short description of PSTagsField.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Siva/PSTagsField",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Siva": "ysvganesh7@gamil.com"
+  },
+  "source": {
+    "git": "https://github.com/Siva/PSTagsField.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PSTagsField/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module PSTagsField {
+  umbrella header "PSTagsField-umbrella.h"
+
+  export *
+  module * { export * }
+}

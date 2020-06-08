@@ -1,0 +1,16 @@
+PODS:
+  - PSTagsField (0.1.0)
+
+DEPENDENCIES:
+  - PSTagsField (from `../`)
+
+EXTERNAL SOURCES:
+  PSTagsField:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PSTagsField: f63236e4c9a699a6b24c34882bcdb643ce7e8c50
+
+PODFILE CHECKSUM: 2fae5fc298d0cf0ad688aa666c6e0a6236117e68
+
+COCOAPODS: 1.8.4
