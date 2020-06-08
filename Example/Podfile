@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PSTagsField_Example' do
+  pod 'PSTagsField', :path => '../'
+
+  target 'PSTagsField_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
