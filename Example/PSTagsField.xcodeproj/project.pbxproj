@@ -28,7 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		55E40AF681A1DE06E63384FB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		47AD6F59248E55E200218141 /* PSTagsField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PSTagsField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E40AF681A1DE06E63384FB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PSTagsField_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSTagsField_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,12 +41,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		61B1E06BBCC2E1AE5A21ED96 /* Pods_PSTagsField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PSTagsField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63105E84148B3B6F63C084E1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		63105E84148B3B6F63C084E1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		651B4C3D04CB5D6649EDA60E /* Pods_PSTagsField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PSTagsField_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		710EBD0BD451A083BF21D2A7 /* Pods-PSTagsField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSTagsField_Example.debug.xcconfig"; path = "Target Support Files/Pods-PSTagsField_Example/Pods-PSTagsField_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BC20719ADB574FE7F809F68A /* Pods-PSTagsField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSTagsField_Example.release.xcconfig"; path = "Target Support Files/Pods-PSTagsField_Example/Pods-PSTagsField_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DC1E721B6D0025FB5B3A8343 /* Pods-PSTagsField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSTagsField_Tests.release.xcconfig"; path = "Target Support Files/Pods-PSTagsField_Tests/Pods-PSTagsField_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		DF90F4BDCA817090808592B5 /* PSTagsField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PSTagsField.podspec; path = ../PSTagsField.podspec; sourceTree = "<group>"; };
+		DF90F4BDCA817090808592B5 /* PSTagsField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PSTagsField.podspec; path = ../PSTagsField.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E3AAF9B0379C0FB1C4C02153 /* Pods-PSTagsField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSTagsField_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PSTagsField_Tests/Pods-PSTagsField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +78,6 @@
 				E3AAF9B0379C0FB1C4C02153 /* Pods-PSTagsField_Tests.debug.xcconfig */,
 				DC1E721B6D0025FB5B3A8343 /* Pods-PSTagsField_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -154,6 +154,7 @@
 		61400086900A07C25F570921 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47AD6F59248E55E200218141 /* PSTagsField.framework */,
 				61B1E06BBCC2E1AE5A21ED96 /* Pods_PSTagsField_Example.framework */,
 				651B4C3D04CB5D6649EDA60E /* Pods_PSTagsField_Tests.framework */,
 			);
@@ -227,6 +228,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

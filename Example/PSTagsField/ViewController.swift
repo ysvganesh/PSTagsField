@@ -7,18 +7,41 @@
 //
 
 import UIKit
+import PSTagsField
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+  @IBOutlet weak var tagsField: PSTagsField!
+  @IBOutlet weak var tagsFieldHeightConstraint: NSLayoutConstraint?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    var appearance = PSTagsFieldAppearance()
+    appearance.titleFont = UIFont(name: "AvenirNext-Regular", size: 14)!
+    appearance.textFont = UIFont(name: "AvenirNext-Regular", size: 14)!
+    
+    //format.uppercasedTitles = true
+    appearance.alertColor = .red
+    appearance.alertFont = UIFont(name: "AvenirNext-Regular", size: 14)!
+    
+    tagsField.setUp(with: appearance, placeHolder: "User Tags")
+    tagsField.targetTitleLeadingPadding = 10
+    
+    view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+    
+    
+    tagsField.onDidChangeHeightTo = { [unowned self] height in
+      self.tagsFieldHeightConstraint?.constant = height + 20.0
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+//    tagsField.tagsField.onShouldAcceptTag = { field in
+//      return false
+//    }
+  }
+    
+  @objc func handleTap() {
+    tagsField.tagsField.endEditing()
+    tagsField.tagsField.unselectAllTagViewsAnimated()
+  }
 }
-
