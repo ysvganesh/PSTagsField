@@ -23,10 +23,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAH-nx-FtW" customClass="PSTagsField" customModule="PSTagsField">
-                                <rect key="frame" x="16" y="180" width="343" height="80"/>
+                                <rect key="frame" x="16" y="180" width="343" height="55"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="ip1-9s-Pcc"/>
+                                    <constraint firstAttribute="height" constant="55" id="ip1-9s-Pcc"/>
                                 </constraints>
                             </view>
                         </subviews>

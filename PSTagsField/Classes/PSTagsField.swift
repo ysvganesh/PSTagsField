@@ -170,21 +170,27 @@ extension PSTagsField {
     
     tagsField.onDidAddTag = { [weak self] field, tag in
       self?.tagsField.placeholder = "Enter text"
+      self?.tagsFieldTopConstraint?.constant = 25
       self?.onDidAddTag?(field, tag)
     }
     
     tagsField.onDidRemoveTag = { [weak self] field, tag in
-      if self?.tagsField.tags.isEmpty ?? false { self?.tagsField.placeholder = "" }
+      if self?.tagsField.tags.isEmpty ?? false {
+        self?.tagsField.placeholder = ""
+        self?.tagsFieldTopConstraint?.constant = 20
+      }
       self?.onDidRemoveTag?(field, tag)
     }
     
+    tagsField.onDidChangeHeightTo = { [weak self] _, height in
+      self?.onDidChangeHeightTo?(height)
+    }
   }
   
   func animateIn() {
     isPlaceholderVisible = false
     
     titleLabelTopConstraint?.constant = 6
-    //tagsFieldTopConstraint?.constant = 25
     
     titleLabelLeadingConstraint?.constant = targetTitleLeadingPadding
     
@@ -201,7 +207,7 @@ extension PSTagsField {
     
     titleLabelTopConstraint?.constant = self.frame.height/2.0 - titleLabel.frame.height/2.0
     
-    //tagsFieldTopConstraint?.constant = 25
+    tagsFieldTopConstraint?.constant = 20
     titleLabelLeadingConstraint?.constant = 15
     
     UIView.animate(withDuration: 0.3) { [weak self] in

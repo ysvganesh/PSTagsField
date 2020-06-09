@@ -31,8 +31,21 @@ class ViewController: UIViewController {
     view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     
     
+    /*tagsField.onDidAddTag = { [unowned self] _, _ in
+      
+      
+    }
+    
+    tagsField.onDidRemoveTag = { [unowned self] _, _ in
+      
+    }*/
+    
     tagsField.onDidChangeHeightTo = { [unowned self] height in
-      self.tagsFieldHeightConstraint?.constant = height + 20.0
+      if self.tagsField.tagsField.tags.isEmpty {
+        self.tagsFieldHeightConstraint?.constant = 55
+      }else {
+        self.tagsFieldHeightConstraint?.constant = height + 20.0
+      }
     }
     
 //    tagsField.tagsField.onShouldAcceptTag = { field in
