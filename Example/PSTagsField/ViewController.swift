@@ -48,9 +48,11 @@ class ViewController: UIViewController {
       }
     }
     
-//    tagsField.tagsField.onShouldAcceptTag = { field in
-//      return false
-//    }
+    tagsField.tagsField.onShouldAcceptTag = { field in
+      return !field.text!.contains("@")
+    }
+    
+    
   }
     
   @objc func handleTap() {

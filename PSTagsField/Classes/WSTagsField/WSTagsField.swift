@@ -34,6 +34,13 @@ open class WSTagsField: UIScrollView {
         }
     }
 
+    // Background color for tag view in normal (non-selected) state, as an alternative to `.tintColor` which changes caret color. Fallback to `.tintColor` if unspecified.
+    open var tagColor: UIColor? {
+        didSet {
+            tagViews.forEach { $0.tintColor = self.tagColor }
+        }
+    }
+  
     /// Text color for tag view in normal (non-selected) state.
     open var textColor: UIColor? {
         didSet {
@@ -387,15 +394,15 @@ open class WSTagsField: UIScrollView {
         if let onValidateTag = onValidateTag, !onValidateTag(tag, self.tags) {
             return
         }
-        else if self.tags.contains(tag) {
-            return
-        }
+//        else if self.tags.contains(tag) {
+//            return
+//        }
 
         self.tags.append(tag)
 
         let tagView = WSTagView(tag: tag)
         tagView.font = self.font
-        tagView.tintColor = self.tintColor
+        tagView.tintColor = self.tagColor ?? self.tintColor
         tagView.textColor = self.textColor
         tagView.selectedColor = self.selectedColor
         tagView.selectedTextColor = self.selectedTextColor
