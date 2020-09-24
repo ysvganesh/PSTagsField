@@ -15,6 +15,7 @@ open class PSTagsField: UIView {
       titleLabel.textColor = appearance.titleColor
       alertLabel.font = appearance.alertFont
       tagsField.font = appearance.textFont
+      tagsField.tagColor = appearance.tagColor
     }
   }
   
@@ -134,7 +135,8 @@ open class PSTagsField: UIView {
     tagsField.textField.returnKeyType = .search
     tagsField.delimiter = ""
     
-    tagsField.tintColor = UIColor(red: 165.0 / 255.0, green: 204.0 / 255.0, blue: 1, alpha: 1)
+    tagsField.tintColor = appearance.textColor
+    tagsField.tagColor = appearance.tagColor
     tagsField.textColor = UIColor(white: 0.0, alpha: 0.8)
     
     tagsField.selectedColor = UIColor(red: 85.0 / 255.0, green: 158.0 / 255.0, blue: 1, alpha: 1)

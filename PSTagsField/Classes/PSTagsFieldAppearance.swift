@@ -21,6 +21,9 @@ public struct PSTagsFieldAppearance {
     /// TextField text color
     public var textColor = UIColor.white
   
+    /// TextField text color
+    public var tagColor = UIColor(red: 165.0 / 255.0, green: 204.0 / 255.0, blue: 1, alpha: 1)
+  
     //When title label becomes placeHolder
     public var placeHolderColor: UIColor = UIColor(white: 1.0, alpha: 0.8)
     
